@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div> <button id= button1 onclick="loadImage(0)"> 1 </button>
+    
+    
+    </div>
+
+    <div> <button id= button2 onclick="loadImage(1)"> 2 </button>
+    
+    
+    </div>
+
+    <div> <button id= button3 onclick="loadImage(2)"> 3 </button>
+    
+    
+    </div>
+
+<script> 
+
+     function loadImage(divIndex) {
+        const divs = document.getElementsByTagName('div');
+        const div = divs[divIndex];
+
+        if (div.querySelector('img')) {
+            return;
+        }
+
+        const img = document.createElement('img');
+        img.src = 'https://powertofly.com/up/media-library/work-from-home-meme-captioned-a-month-into-working-from-home-with-a-photo-of-man-with-beard-screaming-what-day-is-it.jpg?id=32177790&width=980'; 
+        div.appendChild(img);
+    }
+</script>
+</body>
